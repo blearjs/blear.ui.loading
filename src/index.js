@@ -33,7 +33,7 @@ var Loading = Window.extend({
 
         options = object.assign(true, {}, defaults, options);
         var size = gifSize + options.padding * 2;
-        the.Super({
+        Loading.parent(the, {
             width: size,
             height: size,
             topRate: 1 / 2,
@@ -41,7 +41,7 @@ var Loading = Window.extend({
         });
 
         // init node
-        the.Super.setHTML(tpl.render({gif: gif}));
+        Loading.parent.setHTML(the, tpl.render({gif: gif}));
         the[_mask] = new Mask({
             opacity: 0.3,
             bgColor: 'white'
@@ -69,7 +69,7 @@ var Loading = Window.extend({
 
         callback = fun.noop(callback);
         callback = fun.bind(callback, the);
-        the.Super.destroy(function () {
+        Loading.parent.destroy(the, function () {
             the[_mask].destroy(callback);
         });
     }
