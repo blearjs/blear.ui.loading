@@ -1,0 +1,27 @@
+$loading-size: 30px;
+
+.dkui-loading {
+  text-align: center;
+  background: #000;
+  height: 100%;
+  position: relative;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+
+  &-gif {
+    width: $loading-size;
+    height: $loading-size;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -($loading-size/2);
+    margin-left: -($loading-size/2);
+
+    img {
+      width: $loading-size;
+      height: $loading-size;
+      border: 0;
+      vertical-align: middle;
+    }
+  }
+}

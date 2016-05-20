@@ -1,0 +1,20 @@
+.dkui-loading {
+  text-align: center;
+  background: #000;
+  height: 100%;
+  position: relative;
+  -webkit-border-radius: 8px;
+  border-radius: 8px; }
+  .dkui-loading-gif {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -15px; }
+    .dkui-loading-gif img {
+      width: 30px;
+      height: 30px;
+      border: 0;
+      vertical-align: middle; }
