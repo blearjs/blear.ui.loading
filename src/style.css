@@ -1,11 +1,11 @@
-.dkui-loading {
+.blearui-loading {
   text-align: center;
   background: #000;
   height: 100%;
   position: relative;
   -webkit-border-radius: 8px;
   border-radius: 8px; }
-  .dkui-loading-gif {
+  .blearui-loading-gif {
     width: 30px;
     height: 30px;
     position: absolute;
@@ -13,7 +13,7 @@
     left: 50%;
     margin-top: -15px;
     margin-left: -15px; }
-    .dkui-loading-gif img {
+    .blearui-loading-gif img {
       width: 30px;
       height: 30px;
       border: 0;
