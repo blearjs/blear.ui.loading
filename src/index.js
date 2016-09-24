@@ -49,6 +49,7 @@ var Loading = Window.extend({
 
         // init event
         the.on('beforeOpen', function () {
+            the[_mask].zIndex(UI.zIndex());
             the[_mask].open();
             hasLoading = true;
         });
