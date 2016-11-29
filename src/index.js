@@ -41,7 +41,7 @@ var Loading = Window.extend({
         });
 
         // init node
-        Loading.parent.setHTML(the, tpl.render({gif: gif}));
+        Loading.invike('setHTML', the, tpl.render({gif: gif}));
         the[_mask] = new Mask({
             opacity: 0.3,
             bgColor: 'white'
@@ -70,7 +70,7 @@ var Loading = Window.extend({
 
         callback = fun.noop(callback);
         callback = fun.bind(callback, the);
-        Loading.parent.destroy(the, function () {
+        Loading.invoke('destroy', the, function () {
             the[_mask].destroy(callback);
         });
     }
