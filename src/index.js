@@ -41,7 +41,7 @@ var Loading = Window.extend({
         });
 
         // init node
-        Loading.invike('setHTML', the, tpl.render({gif: gif}));
+        Loading.invoke('setHTML', the, tpl.render({gif: gif}));
         the[_mask] = new Mask({
             opacity: 0.3,
             bgColor: 'white'
