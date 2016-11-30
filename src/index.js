@@ -20,7 +20,7 @@ var style =     require('./style.css', 'css');
 var gif =       require('./loading.gif', 'file');
 
 var tpl = new Template(template);
-var UI_CLASS = UI.UI_CLASS + '-loading';
+var namespace = UI.UI_CLASS + '-loading';
 var gifSize = 30;
 var defaults = {
     padding: 15
@@ -37,7 +37,8 @@ var Loading = Window.extend({
             width: size,
             height: size,
             topRate: 1 / 2,
-            leftRate: 1 / 2
+            leftRate: 1 / 2,
+            addClass: namespace + '-window'
         });
 
         // init node
@@ -86,7 +87,7 @@ document.addEventListener('touchstart', function (ev) {
     }
 }, true);
 
-style += '.' + UI_CLASS + '-gif{' +
+style += '.' + namespace + '-gif{' +
     /**/'background-image:url(' + gif + ');' +
     '}';
 // 预加载

@@ -8,6 +8,12 @@ $loading-size: 30px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
 
+
+  &-window .blearui-window-container {
+    width: 100%;
+    height: 100%;
+  }
+
   &-gif {
     width: $loading-size;
     height: $loading-size;
