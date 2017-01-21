@@ -1,5 +1,7 @@
 # blear.ui.loading
 
+<https://blear.ydr.me/ui/loading>
+
 [![npm module][npm-img]][npm-url]
 [![build status][travis-img]][travis-url]
 [![coverage][coveralls-img]][coveralls-url]

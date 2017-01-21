@@ -31,7 +31,7 @@ var Loading = Window.extend({
     constructor: function (options) {
         var the = this;
 
-        options = object.assign(true, {}, defaults, options);
+        options = the[_options] = object.assign(true, {}, defaults, options);
         var size = gifSize + options.padding * 2;
         Loading.parent(the, {
             width: size,
@@ -61,6 +61,24 @@ var Loading = Window.extend({
         });
     },
 
+    /**
+     * 获取配置
+     * @param key
+     * @returns {*}
+     */
+    getOptions: function (key) {
+        return UI.getOptions(this, _options, key);
+    },
+
+    /**
+     * 获取配置
+     * @param key
+     * @param val
+     * @returns {*}
+     */
+    setOptions: function (key, val) {
+        return UI.setOptions(this, _options, key, val);
+    },
 
     /**
      * 销毁实例
@@ -69,7 +87,7 @@ var Loading = Window.extend({
     destroy: function (callback) {
         var the = this;
 
-        callback = fun.noop(callback);
+        callback = fun.ensure(callback);
         callback = fun.bind(callback, the);
         Loading.invoke('destroy', the, function () {
             the[_mask].destroy(callback);
@@ -78,6 +96,7 @@ var Loading = Window.extend({
 });
 
 var _mask = Loading.sole();
+var _options = Loading.sole();
 
 document.addEventListener('touchstart', function (ev) {
     if (hasLoading) {
